@@ -1,0 +1,4 @@
+mixin tile-gallery(tiles)
+    .tile-gallery
+        each tile in tiles
+            +tile(tile.title, tile.text, tile.imgPath)

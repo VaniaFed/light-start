@@ -1,0 +1,43 @@
+body {
+	font: 10px Montserrat, Arial;
+	line-height: 1.5;
+	color: #333;
+}
+
+img {
+	width: 100%;
+}
+
+img, p, h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+}
+
+p {font-size: 16px;}
+
+h1 {font-size: 64px;}
+h2 {font-size: 48px;}
+h3 {font-size: 36px;}
+h4 {font-size: 24px;}
+h5 {font-size: 18px;}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+
+	@include media-mobile {
+		max-width: none;
+	}
+
+	@include media-tablet {
+		max-width: none;
+	}
+
+	@include media-laptop {
+		max-width: none;
+	}
+
+	@include media-desktop {
+		max-width: 1200px;
+	}
+}

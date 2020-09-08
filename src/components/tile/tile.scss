@@ -1,0 +1,31 @@
+.tile {
+    text-align: center;
+
+    @include media-laptop {
+        max-width: 360px;
+        margin-top: 64px;
+    }
+
+    @include media-tablet {
+        max-width: 360px;
+        margin-top: 64px;
+    }
+
+    @include media-mobile {
+        max-width: none;
+        margin-top: 64px;
+    }
+
+    &__image {
+        width: 120px;
+        height: 120px;
+    }
+
+    &__heading {
+        margin-top: 36px;
+    }
+
+    &__text {
+        margin-top: 16px;
+    }
+}

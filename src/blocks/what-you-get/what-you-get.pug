@@ -1,32 +1,25 @@
-include ./components/tile/tile
-include ./components/tile-gallery/tile-gallery
-
-head
-    style.
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-
 -
     var tiles = [
         {
             title: "Ценный опыт",
             text: "У вас появится возможность реализации себя, как специалиста на фриланс-бирже",
-            imgPath: "img/experience.svg"
+            imgPath: "../img/experience.svg"
         },
         {
             title: "Развитое портфолио",
             text: "Вы наработаете богатое портфолио, после чего вам проще будет заниматься на фрилансе уже без нашей помощи",
-            imgPath: "img/portfolio.svg"
+            imgPath: "../img/portfolio.svg"
         },
         {
             title: "Клиентская база",
             text: "У вас появится возможность зарекомендовать себя, как надежного партнера",
-            imgPath: "img/clients.svg"
+            imgPath: "../img/clients.svg"
         },
         {
             title: "Вы экономите время и нервы",
             text: "Вам больше не придется искать заказы самостоятельно и договариваться о цене",
-            imgPath: "img/peace.svg"
+            imgPath: "../img/peace.svg"
         },
     ]
-.container
++section({title: "Что вы получаете от сотрудничества"})
     +tile-gallery(tiles)

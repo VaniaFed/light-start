@@ -6,8 +6,8 @@ module.exports = {
 	entry: './src/index.js',
 	output: {
 		filename: '[name].js',
-		path: path.resolve(__dirname, './dist'),
-		publicPath: './'
+		path: path.resolve(__dirname, 'dist'),
+		publicPath: '/'
 	},
 	module: {
 		rules: [
@@ -43,10 +43,6 @@ module.exports = {
 						loader: "css-loader",
 						options: {sourceMap: true}
 					},
-					{
-						loader: "postcss-loader",
-						options: {sourceMap: true, config: { path: 'src/js/postcss.config.js'}}
-					}
 				]
 			},
 			{
@@ -64,16 +60,17 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(png|svg|jpg|gif)$/,
-				use: [
-					'file-loader',
-				],
+				test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
+				loader: 'file-loader',
+				options: {
+					outputPath: 'img'
+				}
 			},
 		],
 	},
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
-		compress: true,
+		writeToDisk: true,
 		port: 9000
 	},
 	plugins: [
@@ -82,7 +79,7 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			filename: "index.html",
-			template: './src/index.pug'
+			template: './src/pages/main.pug'
 		}),
 	]
 }

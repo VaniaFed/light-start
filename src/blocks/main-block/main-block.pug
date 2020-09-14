@@ -1,13 +1,34 @@
 section.main-block
-    .container
-        .main-block__inner
-            .main-block__left
-                .main-block__main-text
-                    h1.main-block__title Начни зарабатывать на фрилансе прямо сейчас
-                    p.main-block__description Благодаря платформе light start, которая в кротчайшие сроки поможет увеличить ваши показатели во фрилансе
-                .main-block__attention
-                    p.attention__text Ты не выживешь на фрилансе без нас
-                    a.attention__button(href="#problems-we-solve")
-                        i(class="fas fa-arrow-down")
-            .main-block__right
-                form.main-block__form
+    .main-block__inner
+        .main-block__left
+            .main-block__main-text
+                h1.main-block__title Начни зарабатывать на фрилансе прямо сейчас
+                p.main-block__description Благодаря платформе light start, которая в кротчайшие сроки поможет увеличить ваши показатели во фрилансе
+            .main-block__attention
+                p.attention__text Ты не выживешь на фрилансе без нас
+                a.attention__button(href="#problems-we-solve")
+                    i(class="fas fa-arrow-down")
+        .main-block__right
+            .main-block__form
+                +form({
+                    title: "Начни зарабатывать уже сегодня!",
+                    description: "Оставь заявку. В ближайшее время тобой свяжется наш менеджер",
+                    fields: [
+                        {
+                            label: 'Имя',
+                            name: 'name',
+                            placeholder: 'Иван Ургант'
+                        },
+                        {
+                            label: 'Телефон',
+                            name: 'phoneNumber',
+                            placeholder: '+7 (995) 111-11-11'
+                        },
+                        {
+                            label: 'Email',
+                            name: 'email',
+                            placeholder: 'your-email@gmail.com'
+                        },
+                    ],
+                    submitText: "Отправить заявку",
+                })

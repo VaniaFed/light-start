@@ -8,6 +8,23 @@ body {
 	color: #333;
 }
 
+input, button {
+	font-family: Montserrat;
+}
+
+::selection {
+	color: #fff;
+	background: #2172EC;
+}
+
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input::-ms-input-placeholder,
+input::-moz-placeholder
+input::placeholder {
+	color: #999;
+}
+
 img {
 	width: 100%;
 }

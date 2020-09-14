@@ -27,10 +27,6 @@
         background: #000;
     }
 
-    .container {
-        height: 100%;
-    }
-
     &__inner {
         justify-content: space-between;
         display: flex;
@@ -38,20 +34,28 @@
         z-index: 4;
         height: 100%;
         color: #fff;
-        padding-top: 140px;
     }
 
     &__left {
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         display: flex;
-        max-width: 850px;
-        height: 100%;
+        align-items: center;
+        padding: 120px 0 40px;
+        width: 60%;
         text-align: center;
     }
 
+    &__right {
+        align-items: center;
+        display: flex;
+        width: 40%;
+    }
+
     &__title {
+        margin: 0 auto;
         margin-bottom: 36px;
+        max-width: 800px;
     }
 
     &__description {
@@ -62,9 +66,7 @@
     }
 
     &__form {
-        background: #fff;
-        width: 300px;
-        height: 350px;
+        width: 400px;
     }
 }
 

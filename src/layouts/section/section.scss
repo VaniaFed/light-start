@@ -4,6 +4,14 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    &__afterwards {
+        margin: 0 auto;
+        margin-top: 64px;
+        text-align: center;
+        font-size: 24px;
+        max-width: 800px;
+    }
 }
 
 .section__title {

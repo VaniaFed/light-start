@@ -59,11 +59,11 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h5 {
@@ -293,6 +293,7 @@ h5 {
 .main-block {
   position: relative;
   z-index: 2;
+  margin-bottom: 100px;
   height: calc(100vh - 60px);
   background: center/cover no-repeat url(/img/c1e94ee2f47407bf6bff70872cc9878a.jpg);
 }
@@ -380,4 +381,32 @@ h5 {
   background: #fff;
   color: #2172EC;
   animation-play-state: paused;
+}
+
+.problems-list__item {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 64px;
+}
+.problems-list__item:last-child {
+  margin-bottom: 0;
+}
+.problems-list__left {
+  margin-right: 36px;
+}
+.problems-list__right {
+  max-width: 600px;
+  width: 100%;
+}
+.problems-list__number {
+  font-size: 64px;
+  font-weight: 700;
+  color: #2172EC;
+}
+.problems-list__title, .problems-list__text {
+  margin-bottom: 16px;
+}
+.problems-list__solution {
+  font-size: 14px;
+  color: #666;
 }

@@ -1,0 +1,11 @@
+mixin points-list(args)
+    .points-list
+        each point, index in args.pointsList
+            .points-list__item
+                .points-list__left
+                    .points-list__number(class={'points-list__number_round': args.isCircleNumber})= `${index+1}${args.isCircleNumber ? '' : '.'}`
+                .points-list__right
+                    h3.points-list__title= point.title
+                    p.points-list__text= point.details
+                    if point.solution
+                        p.points-list__solution= point.solution

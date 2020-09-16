@@ -1,0 +1,65 @@
+.points-list {
+
+    &__item {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 64px;
+
+        &:last-child {
+            margin-bottom: 0;
+
+            .points-list__number:after {
+                content: none;
+            }
+        }
+    }
+
+    &__left {
+        margin-right: 36px;
+    }
+
+    &__right {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    &__number {
+        position: relative;
+        font-size: 64px;
+        font-weight: 700;
+        color: #2172EC;
+
+        &_round {
+            width: 90px;
+            height: 90px;
+            text-align: center;
+            font-size: 48px;
+            line-height: 90px;
+            border-radius: 50%;
+            background: #2172EC;
+            color: #fff;
+            margin-top: -10px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: calc(100% - 8x);
+            left: calc(50% - 3px);
+            display: block;
+            width: 6px;
+            height: 160px;
+            background: #2172EC;
+        }
+    }
+
+    &__title,
+    &__text {
+        margin-bottom: 16px;
+    }
+
+    &__solution {
+        font-size: 14px;
+        color: #666;
+    }
+}

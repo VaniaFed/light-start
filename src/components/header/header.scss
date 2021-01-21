@@ -1,5 +1,6 @@
 .header {
     height: 60px;
+    margin-top: 20px;
 }
 
 .header__inner {
@@ -15,7 +16,10 @@
 }
 
 .header__logo {
-    width: 140px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #3374F2;
+    text-decoration: none;
 }
 
 .header__nav {

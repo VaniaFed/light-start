@@ -1,112 +1,45 @@
-@keyframes bounce {
-    0% {
-        transform: translateY(0px);
-    }
-
-    100% {
-        transform: translateY(6px);
-    }
-}
-
 .main-block {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 100px;
-    height: calc(100vh - 60px);
-    background: center / cover no-repeat url(img/working-man.jpg);
-
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 3;
-        opacity: 0.8;
-        display: block;
-        background: #000;
-    }
 
     &__inner {
         justify-content: space-between;
+        align-items: center;
         display: flex;
-        position: relative;
-        z-index: 4;
-        height: 100%;
-        color: #fff;
     }
 
     &__left {
-        flex-direction: column;
-        justify-content: space-between;
-        display: flex;
-        align-items: center;
-        padding: 120px 0 40px;
-        width: 60%;
-        text-align: center;
+        width: 50%;
     }
 
     &__right {
         align-items: center;
         display: flex;
-        width: 40%;
+        width: 50%;
+        max-width: 500px;
     }
 
-    &__title {
-        margin: 0 auto;
-        margin-bottom: 36px;
+    &-cta__title {
+        margin-bottom: 24px;
         max-width: 800px;
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 1.3;
     }
 
-    &__description {
-        margin: 0 auto;
-        max-width: 600px;
-        font-weight: 200;
+    &-cta__description {
+        margin-bottom: 36px;
+        max-width: 500px;
         font-size: 18px;
+        line-height: 1.5;
+        color: #999;
     }
 
-    &__form {
-        width: 400px;
-    }
-}
-
-.attention__text {
-    margin: 0 auto;
-    margin-bottom: 16px;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 100;
-}
-
-.attention__button {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    animation: bounce 0.75s 5s infinite alternate ease-out;
-    margin: 0 auto;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0px 0px 20px rgba(33, 114, 236, 0.4);
-    transition: all 0.05s;
-    cursor: pointer;
-    border-radius: 60px;
-    font-size: 14px;
-    background: #2172EC;
-    text-decoration: none;
-    color: #fff;
-
-    i {
-        transition: all 0.2s;
-    }
-
-    &:hover > i {
-        transform: translateY(2px);
-    }
-
-    &:hover {
-        background: #fff;
-        color: #2172EC;
-        animation-play-state: paused
+    &-cta__button {
+        padding: 20px 50px;
+        color: #fff;
+        background: #22ED5B;
+        font-size: 18px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
     }
 }

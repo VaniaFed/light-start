@@ -1,8 +1,0 @@
-mixin section(args)
-    .section(id=args.id)
-        h2.section__title(class={'mb-64': !args.description, 'mb-24': args.description})= args.title
-        if args.description
-            .section__description(class="mb-64")= args.description
-        if block
-            block
-        .section__afterwards= args.afterwards

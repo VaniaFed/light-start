@@ -1,34 +1,9 @@
 section.main-block
-    .main-block__inner
+    .main-block__inner.container
         .main-block__left
             .main-block__main-text
-                h1.main-block__title Начни зарабатывать на фрилансе прямо сейчас
-                p.main-block__description Благодаря платформе light start, которая в кротчайшие сроки поможет увеличить ваши показатели во фрилансе
-            .main-block__attention
-                p.attention__text Ты не выживешь на фрилансе без нас
-                a.attention__button(href="#problems-we-solve")
-                    i(class="fas fa-arrow-down")
+                h1.main-block-cta__title Не можете найти себя во фрилансе?
+                p.main-block-cta__description Больше не нужно тратить время и силы на поиск заказов, вместе с Light Start вы сможете делать больше за меньшее время.
+                button.main-block-cta__button Подать заявку
         .main-block__right
-            .main-block__form
-                +form({
-                    title: "Начни зарабатывать уже сегодня!",
-                    description: "Оставь заявку. В ближайшее время тобой свяжется наш менеджер",
-                    fields: [
-                        {
-                            label: 'Имя',
-                            name: 'name',
-                            placeholder: 'Иван Ургант'
-                        },
-                        {
-                            label: 'Телефон',
-                            name: 'phoneNumber',
-                            placeholder: '+7 (995) 111-11-11'
-                        },
-                        {
-                            label: 'Email',
-                            name: 'email',
-                            placeholder: 'your-email@gmail.com'
-                        },
-                    ],
-                    submitText: "Отправить заявку",
-                })
+            img(src="../img/Freelancer-bro.svg")

@@ -1,0 +1,8 @@
+mixin section-column(args)
+    .section
+        .container
+            .section__inner
+                .section-text
+                    h3.section__title= args.title
+                    .section__description= args.description
+                img.section__picture(src= args.imgSrc)

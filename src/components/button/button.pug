@@ -3,3 +3,7 @@ mixin button(text, type, className)
         button.button(class= className)= text
     else
         button.button.button--secondary(class= className)= text
+
+        .modal(id="login-form" class="modal") modal
+            form
+                input(type="text")

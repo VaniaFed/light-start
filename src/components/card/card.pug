@@ -1,0 +1,9 @@
+mixin card(title, text, oldPrice, currentPrice, duration, buttonText, theme)
+    .card(class= theme)
+        h4.card__title= title
+        .card__text= text
+        .card__price
+            .card__price-old 5900 ₽
+            .card__price-current 3000 ₽
+                span.card__price-duration 3 месяца
+        +button("Купить", "secondary", "card__button")

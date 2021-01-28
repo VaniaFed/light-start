@@ -1,6 +1,6 @@
 .tile {
     text-align: center;
-    padding-right: 60px;
+    margin-right: 60px;
 
     @include media-laptop {
         max-width: 360px;
@@ -22,17 +22,22 @@
     }
 
     &__image {
-        width: 120px;
-        height: 120px;
+        width: 96px;
+        height: 96px;
+        fill: red;
     }
 
     &__heading {
-        margin-top: 24px;
         max-width: 300px;
+        margin: 0 auto;
+        margin-top: 24px;
+        font-size: 20px;
     }
 
     &__text {
-        margin-top: 8px;
         max-width: 300px;
+        margin: 0 auto;
+        margin-top: 8px;
+        font-size: 16px;
     }
 }

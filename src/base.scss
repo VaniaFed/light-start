@@ -62,3 +62,33 @@ h5 {font-size: 18px;}
 		max-width: 1200px;
 	}
 }
+
+.orange {
+	.card__title {
+		color: #F6450D;
+	}
+	
+	.card__button {
+		background: #F6450D;
+	}
+}
+
+.purple {
+	.card__title {
+		color: #7019DE;
+	}
+	
+	.card__button {
+		background: #7019DE;
+	}
+}
+
+.mint {
+	.card__title {
+		color: #1DE3B4;
+	}
+	
+	.card__button {
+		background: #1DE3B4;
+	}
+}

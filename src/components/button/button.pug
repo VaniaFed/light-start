@@ -1,0 +1,5 @@
+mixin button(text, type, className)
+    if (type === 'primary')
+        button.button(class= className)= text
+    else
+        button.button.button--secondary(class= className)= text

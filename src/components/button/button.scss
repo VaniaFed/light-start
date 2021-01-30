@@ -1,3 +1,30 @@
+.button {
+    padding: 16px 32px;
+    color: #fff;
+    background: #22ED5B;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:not(.button--secondary) {
+        &:hover {
+            background: #1fd151;
+        }
+
+        &:active {
+            background: #22ED5B;
+        }
+
+    }
+}
+
 .button--secondary {
     padding: 16px 40px;
     background: #333;

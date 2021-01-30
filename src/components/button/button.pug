@@ -1,9 +1,5 @@
-mixin button(text, type, className)
+mixin button(text, type, className, orderName)
     if (type === 'primary')
-        button.button(class= className)= text
+        button.button(class= className data-order-name= orderName)= text
     else
-        button.button.button--secondary(class= className)= text
-
-        .modal(id="login-form" class="modal") modal
-            form
-                input(type="text")
+        button.button.button--secondary(class= className data-order-name= orderName)= text

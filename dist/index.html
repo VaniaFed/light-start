@@ -29,7 +29,7 @@
         <div class="main-block__main-text">
           <h1 class="main-block-cta__title">Не можете найти себя во фрилансе?</h1>
           <p class="main-block-cta__description">Больше не нужно тратить время и силы на поиск заказов, вместе с Light Start вы сможете делать больше за меньшее время.</p>
-          <button class="main-block-cta__button">Подать заявку</button>
+          <button class="button">Подать заявку</button>
         </div>
       </div>
       <div class="main-block__right"><img src="/img/1c2b5c78a327f11c82f937775ed9b89e.svg"/></div>
@@ -106,43 +106,52 @@
             <h4 class="card__title">Студент</h4>
             <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
             <div class="card__price">
-              <div class="card__price-old">5900 ₽</div>
-              <div class="card__price-current">3000 ₽<span class="card__price-duration">3 месяца</span></div>
+              <div class="price">
+                <div class="price-old">3000 ₽</div>
+                <div class="price-current">1200 ₽<span class="price-duration">3 месяца</span></div>
+              </div>
             </div>
-            <button class="button button--secondary card__button">Купить</button>
-            <div class="modal modal" id="login-form">modal
-              <form>
-                <input type="text"/>
-              </form>
-            </div>
+            <button class="button button--secondary card__button" data-order-name="Студент">Купить</button>
           </div>
           <div class="card purple">
-            <h4 class="card__title">Студент</h4>
+            <h4 class="card__title">Профессионал</h4>
             <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
             <div class="card__price">
-              <div class="card__price-old">5900 ₽</div>
-              <div class="card__price-current">3000 ₽<span class="card__price-duration">3 месяца</span></div>
+              <div class="price">
+                <div class="price-old">5900 ₽</div>
+                <div class="price-current">3000 ₽<span class="price-duration">3 месяца</span></div>
+              </div>
             </div>
-            <button class="button button--secondary card__button">Купить</button>
-            <div class="modal modal" id="login-form">modal
-              <form>
-                <input type="text"/>
-              </form>
-            </div>
+            <button class="button button--secondary card__button" data-order-name="Профессионал">Купить</button>
           </div>
           <div class="card mint">
-            <h4 class="card__title">Студент</h4>
+            <h4 class="card__title">Учёный</h4>
             <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
             <div class="card__price">
-              <div class="card__price-old">5900 ₽</div>
-              <div class="card__price-current">3000 ₽<span class="card__price-duration">3 месяца</span></div>
+              <div class="price">
+                <div class="price-old">10000 ₽</div>
+                <div class="price-current">6900 ₽<span class="price-duration">3 месяца</span></div>
+              </div>
             </div>
-            <button class="button button--secondary card__button">Купить</button>
-            <div class="modal modal" id="login-form">modal
-              <form>
-                <input type="text"/>
-              </form>
-            </div>
+            <button class="button button--secondary card__button" data-order-name="Учёный">Купить</button>
+          </div>
+        </div>
+        <div class="modal" id="order-modal">
+          <div class="order-modal">
+            <div class="order-modal__title">Студент </div>
+            <form class="order-modal-form">
+              <div class="form__field">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" id="email" type="email" name="email"/>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="email">Номер телефона</label>
+                <input class="form__input" id="email" type="tel" name="phone"/>
+              </div>
+              <div class="form__submit-button">
+                <button class="button button--secondary card__button">Приобрести</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

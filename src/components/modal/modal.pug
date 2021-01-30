@@ -1,2 +1,14 @@
-mixin modal(text, type, className)
-    .modal modal
+mixin modal()
+    .order-modal
+        .order-modal__title Студент 
+        form.order-modal-form
+            .form__field
+                label.form__label(for="email") Email
+                input#email.form__input(type="email" name="email")
+            .form__field
+                label.form__label(for="email") Номер телефона
+                input#email.form__input(type="tel" name="phone")
+            .form__submit-button
+                +button('Приобрести', 'secondary', 'card__button')
+
+

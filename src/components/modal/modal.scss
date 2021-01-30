@@ -1,0 +1,46 @@
+.order-modal {
+    &__title {
+        margin-bottom: 32px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &-form {
+
+        &__submit-button {
+            width: 100%;    
+        }
+    }
+
+    .form__field {
+        margin-bottom: 24px;
+    }
+
+    .form__label {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .form__input {
+        width: 100%;
+        padding: 16px 24px;
+        transition: all .3s;
+        font-size: 14px;
+        border-radius: 40px;
+        border: 1px solid #999;
+
+        &:active,
+        &:focus {
+            outline: none;
+            border: 1px solid #333;
+            box-shadow: 4px 4px 10px 0 rgba(#333, 10%);
+        }
+    }
+
+    .form__submit-button button {
+        width: 100%;
+        margin-top: 8px;
+    }
+}

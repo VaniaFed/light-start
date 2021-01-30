@@ -16,34 +16,7 @@
         color: #999;
     }
 
-    &__price {
-        align-items: center;
-        display: flex;
+    .card__price {
         margin-bottom: 20px;
-        &-old {
-            margin-right: 12px;
-            text-decoration: line-through;
-            font-size: 14px;
-            font-weight: 300;
-            color: #999;
-        }
-
-        &-current {
-            font-size: 18px;
-            font-weight: 300;
-        }
-
-        &-duration {
-            margin-left: 4px;
-            display: inline-block;
-            font-weight: 500;
-
-            &:before {
-                content: '/';
-                display: inline-block;
-                font-weight: 300;
-                margin-right: 4px;
-            }
-        }
     }
 }

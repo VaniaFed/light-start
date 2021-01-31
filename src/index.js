@@ -16,8 +16,12 @@ $('.main-block button').on('click', function() {
     return false;
 });
 
-$('.card__button').on('click', function() {
+$('.card-list .card__button').on('click', function() {
     $('#order-modal').modal();
+
+    const modalForm = $('#order-modal form');
+
+    $('[name="product"]', modalForm).remove();
 
     const $button = $(this);
 
@@ -28,15 +32,24 @@ $('.card__button').on('click', function() {
     const $buttonWrapper = $('.form__submit-button');
     switch (orderName) {
         case 'Студент':
+            $buttonWrapper.removeClass('purple');
+            $buttonWrapper.removeClass('mint');
             $buttonWrapper.addClass('orange'); 
+            modalForm.append('<input type="hidden" name="product" value="student">');
             break;
     
         case 'Профессионал':
+            $buttonWrapper.removeClass('orange');
+            $buttonWrapper.removeClass('mint');
             $buttonWrapper.addClass('purple'); 
+            modalForm.append('<input type="hidden" name="product" value="professional">');
             break;
 
         case 'Учёный':
+            $buttonWrapper.removeClass('orange');
+            $buttonWrapper.removeClass('purple');
             $buttonWrapper.addClass('mint'); 
+            modalForm.append('<input type="hidden" name="product" value="scientist">');
             break;
 
         default:
@@ -45,3 +58,19 @@ $('.card__button').on('click', function() {
 
     return false;
 });
+
+$('.success .card__close').on('click', () => {
+    $('.success').hide();
+    $('.success-overlay').hide();
+});
+
+$(document).on('click', (function (e){
+    if ($(".success .card").is(':visible')) {
+        var div = $(".success .card");
+        if (!div.is(e.target)
+            && div.has(e.target).length === 0) {
+            $('.success').hide();
+            $('.success-overlay').hide();
+        }
+    }
+}));

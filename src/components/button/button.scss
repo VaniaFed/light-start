@@ -1,12 +1,12 @@
 .button {
     padding: 16px 32px;
+    transition: all .3s, transform .35s;
     color: #fff;
     background: #22ED5B;
     font-size: 16px;
     font-weight: 700;
     border: none;
     cursor: pointer;
-    transition: all .3s;
 
     &:active,
     &:focus {
@@ -35,4 +35,13 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 700;
+
+    &:active {
+        transform: translateY(0px);
+        transition: all .3s, transform .1s;
+    }
+
+    &:hover {
+        transform: translateY(1px);
+    }
 }

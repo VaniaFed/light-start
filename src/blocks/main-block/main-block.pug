@@ -1,4 +1,4 @@
-section.main-block
+section.main-block#main
     .main-block__inner.container
         .main-block__left
             .main-block__main-text
@@ -7,3 +7,5 @@ section.main-block
                 +button('Подать заявку', 'primary')
         .main-block__right
             img(src="../img/Freelancer-bro.svg")
+        .modal#order-modal-main
+            +modal(true)

@@ -5,10 +5,19 @@
     border-radius: 42px;
     background: #fff;
 
+    @include media-mobile {
+        padding: 32px;
+        border-radius: 32px;
+    }
+
     &__title {
         margin-bottom: 16px;
         font-size: 28px;
         font-weight: 800;
+
+        @include media-laptop {
+            font-size: 20px;
+        }
     }
 
     &__text {

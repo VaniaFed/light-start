@@ -42,24 +42,34 @@ h3 {font-size: 30px;}
 h4 {font-size: 24px;}
 h5 {font-size: 18px;}
 
+.link {
+	color: #fff;
+	transition: color .1s;
+	text-decoration: none;
+	color: #2587ec;
+}
+
 .container {
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 20px;
 
-	@include media-mobile {
-		max-width: none;
-	}
-
-	@include media-tablet {
-		max-width: none;
+	@include media-desktop {
+		max-width: 1200px;
 	}
 
 	@include media-laptop {
 		max-width: none;
 	}
 
-	@include media-desktop {
-		max-width: 1200px;
+	@include media-tablet {
+		max-width: none;
+		padding: 0 40px;
+	}
+
+	@include media-mobile {
+		max-width: none;
+		padding: 0 20px;
 	}
 }
 
@@ -67,6 +77,10 @@ h5 {font-size: 18px;}
 	padding: 60px;
 	border-radius: 24px;
 	box-shadow: 0 0 10px 0 rgba(#333, 20%);
+
+	@include media-sm-mobile {
+		padding: 32px;
+	}
 }
 
 .modal a.close-modal {

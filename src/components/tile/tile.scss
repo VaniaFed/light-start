@@ -4,17 +4,12 @@
 
     @include media-laptop {
         max-width: 360px;
-        margin-top: 64px;
-    }
-
-    @include media-tablet {
-        max-width: 360px;
-        margin-top: 64px;
+        margin-bottom: 48px;
+        margin-right: 0;
     }
 
     @include media-mobile {
         max-width: none;
-        margin-top: 64px;
     }
 
     &:last-child {
@@ -25,6 +20,11 @@
         width: 96px;
         height: 96px;
         fill: red;
+
+        @include media-tablet {
+            width: 72px;
+            height: 72px;
+        }
     }
 
     &__heading {
@@ -32,6 +32,10 @@
         margin: 0 auto;
         margin-top: 24px;
         font-size: 20px;
+
+        @include media-tablet {
+            font-size: 18px;
+        }
     }
 
     &__text {

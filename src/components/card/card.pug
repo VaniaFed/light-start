@@ -1,14 +1,16 @@
 mixin card(title, text, oldPrice, currentPrice, duration, buttonText, theme)
     .card(class= theme)
-        h4.card__title= title
-        .card__text= text
+        .card__top
+            h4.card__title= title
+            .card__text= text
         if oldPrice && currentPrice && duration
-            .card__price
-                +price({
-                    old: oldPrice,
-                    current: currentPrice,
-                    duration: duration
-                })
-            +button("Купить", "secondary", "card__button", title)
+            .card__bottom
+                .card__price
+                    +price({
+                        old: oldPrice,
+                        current: currentPrice,
+                        duration: duration
+                    })
+                +button("Купить", "secondary", "card__button", title)
         else
             a.card__close

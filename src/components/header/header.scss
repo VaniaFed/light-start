@@ -4,7 +4,9 @@
     padding-top: 20px;
 
     @include media-mobile {
-        height: 100px;
+        position: absolute;
+        height: 60px;
+        width: 100%;
     }
 }
 

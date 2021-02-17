@@ -84,6 +84,6 @@ $('.header__nav-link').on('click', hideNavigation);
 
 $(window).on('click', hideNavigation);
 
-$('.header-nav').on('click', function(event){
+$('.header-nav').on('click', function(event) {
     event.stopPropagation();
 });

@@ -1,6 +1,8 @@
 include ../includes-hub
 
-include ../components/header/header
+include ../components/header/head
 body
-    block content
-include ../components/footer/footer
+    .wrapper.my-page
+        include ../components/header/header
+        block content
+        include ../components/footer/footer

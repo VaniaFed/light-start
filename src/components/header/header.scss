@@ -1,6 +1,7 @@
 .header {
+    position: relative;
     height: 60px;
-    margin-top: 20px;
+    padding-top: 20px;
 
     @include media-mobile {
         height: 100px;
@@ -8,10 +9,28 @@
 }
 
 .header__inner {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+    @include media-mobile {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.header-nav {
     justify-content: space-between;
     align-items: center;
     display: flex;
+    clear: both;
     height: 100%;
+    width: 80%;
+
+    @include media-mobile {
+        width: 100%;
+        flex-direction: column;
+    }
 
     @include media-mobile {
         justify-content: center;
@@ -19,16 +38,72 @@
     }
 }
 
-.header__left {
-    align-items: center;
-    display: flex;
+.burger {
+    right: 0;
+    top: 5px;
+    position: absolute;
+    float: right;
+    display: none;
+    padding: 28px 20px;
+    user-select: none;
+    cursor: pointer;
+
+    &-input {
+        display: none;
+    }
+
+    &__navicon {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+
+        &::before,
+        &::after {
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+
+        &::before {
+            top: 5px;
+        }
+
+        &::after {
+            top: -5px;
+        }
+    }
+
+    @include media-mobile {
+        display: inline-block;
+    }
+}
+
+.burger-input:checked {
+    & ~ .header__left,
+    & ~ .header__right {
+        max-height: 300px;
+    }
 }
 
 .header__logo {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     color: #3374F2;
     text-decoration: none;
+    display: block;
+    width: 20%;
+
+    @include media-mobile {
+        margin-bottom: 16px;
+        width: auto;
+    }
 
     @include media-mobile {
         font-size: 18px;
@@ -36,8 +111,6 @@
 }
 
 .header__nav {
-    margin-left: 44px;
-
     @include media-mobile {
         flex-direction: column;
         display: flex;
@@ -49,8 +122,10 @@
         text-decoration: none;
 
         @include media-mobile {
-            margin-bottom: 12px;
             margin-right: 0;
+            margin-bottom: 8px;
+            padding: 16px 0;
+            border-bottom: 1px solid #666;
         }
 
         &:last-child {
@@ -59,12 +134,36 @@
     }
 }
 
+.header__left,
+.header__right {
+    @include media-mobile {
+        background: #fff;
+        width: 100%;
+    }
+}
+
+.header__left {
+    @include media-mobile {
+        max-height: 0;
+        overflow: hidden;
+    }
+}
+
+.header__right {
+    @include media-mobile {
+        max-height: 0;
+        overflow: hidden;
+    }
+}
+
 .header__social-links {
+    padding: 0;
     @include media-mobile {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0;
+        padding-bottom: 10px;
     }
 }
 
@@ -76,8 +175,11 @@
     transition: all .2s;
 
     @include media-mobile {
-        margin: 0;
-        margin-bottom: 12px;
+        margin-left: 0;
+        margin-bottom: 8px;
+        padding: 16px 0;
+        border-bottom: 1px solid #666;
+        width: 100%;
     }
 
     &:first-child {
@@ -90,5 +192,16 @@
 
     i {
         font-size: 20px;
+    }
+}
+
+.header__nav-link,
+.social__link {
+    @include media-mobile {
+        &:hover,
+        &:active {
+            background: #dedede;
+            color: #333;
+        }
     }
 }

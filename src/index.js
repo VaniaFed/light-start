@@ -74,3 +74,16 @@ $(document).on('click', (function (e){
         }
     }
 }));
+
+const hideNavigation = () => {
+    $('#burger-input').prop('checked', false);
+}
+
+$('.header__nav-link').on('click', hideNavigation);
+
+
+$(window).on('click', hideNavigation);
+
+$('.header-nav').on('click', function(event){
+    event.stopPropagation();
+});

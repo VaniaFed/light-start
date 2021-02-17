@@ -1,18 +1,22 @@
-include ./head
 .header
     .container
         .header__inner
-            .header__left
-                a.header__logo(href="#") Light Start
-                nav.header__nav
-                    a.header__nav-link(href="#main") Главная
-                    a.header__nav-link(href="#benefits") Преимущества
-                    a.header__nav-link(href="#services") Услуги
-            .header__right
-                ul.header__social-links
-                    a.social__link(href="https://vk.com/ligghtstart" target="_blank")
-                        <i class="fab fa-vk"></i>
-                    a.social__link(href="https://www.instagram.com/ligghtstart/" target="_blank") 
-                        <i class="fab fa-instagram"></i>
-                    a.social__link(href="https://www.facebook.com/groups/319399135951595" target="_blank") 
-                        <i class="fab fa-facebook-f"></i>>
+            a.header__logo(href="#") Light Start
+
+            .header-nav
+                label.burger(for="burger-input")
+                    span.burger__navicon
+                input.burger-input#burger-input(type="checkbox")
+                .header__left
+                    nav.header__nav
+                        a.header__nav-link(href="#main") Главная
+                        a.header__nav-link(href="#benefits") Преимущества
+                        a.header__nav-link(href="#services") Услуги
+                .header__right
+                    ul.header__social-links
+                        a.social__link(href="https://vk.com/ligghtstart" target="_blank")
+                            <i class="fab fa-vk"></i>
+                        a.social__link(href="https://www.instagram.com/ligghtstart/" target="_blank") 
+                            <i class="fab fa-instagram"></i>
+                        a.social__link(href="https://www.facebook.com/groups/319399135951595" target="_blank") 
+                            <i class="fab fa-facebook-f"></i>>

@@ -4,9 +4,10 @@
     padding-top: 20px;
 
     @include media-mobile {
+        top: 0;
         position: absolute;
-        height: 60px;
         width: 100%;
+        height: unset;
     }
 }
 
@@ -16,8 +17,7 @@
     display: flex;
 
     @include media-mobile {
-        align-items: flex-start;
-        flex-direction: column;
+        display: block;
     }
 }
 
@@ -25,13 +25,13 @@
     justify-content: space-between;
     align-items: center;
     display: flex;
-    clear: both;
     height: 100%;
     width: 80%;
 
     @include media-mobile {
         width: 100%;
-        flex-direction: column;
+        height: unset;
+        display: block;
     }
 
     @include media-mobile {
@@ -44,7 +44,6 @@
     right: 0;
     top: 5px;
     position: absolute;
-    float: right;
     display: none;
     padding: 28px 20px;
     user-select: none;
@@ -91,6 +90,7 @@
     & ~ .header__left,
     & ~ .header__right {
         max-height: 300px;
+        overflow: unset;
     }
 }
 
@@ -174,7 +174,7 @@
     text-decoration: none;
     font-size: 0;
     margin-left: 24px;
-    transition: all .2s;
+    transition: color .2s;
 
     @include media-mobile {
         margin-left: 0;

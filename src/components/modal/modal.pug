@@ -12,10 +12,10 @@ mixin modal(withService)
                         option(value='scientist') Учёный
             .form__field
                 label.form__label(for="email") Email
-                input#email.form__input(type="email" name="email")
+                input#email.form__input(type="email" name="email" placeholder="email@gmail.com")
             .form__field
                 label.form__label(for="phone") Номер телефона
-                input#phone.form__input(type="tel" name="phone")
+                input#phone.form__input(type="tel" name="phone" placeholder="+7 (999) 999-99-99")
             .form__submit-button
                 +button('Приобрести', 'secondary', 'card__button')
 

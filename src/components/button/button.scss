@@ -1,6 +1,6 @@
 .button {
     padding: 16px 32px;
-    transition: all .3s, transform .35s;
+    transition: background .3s, transform .35s;
     color: #fff;
     background: #22ED5B;
     font-size: 16px;
@@ -42,7 +42,7 @@
         &:active,
         &:focus {
             transform: translateY(0px);
-            transition: all .3s, transform .1s;
+            transition: background .3s, transform .1s;
         }
     }
 }
